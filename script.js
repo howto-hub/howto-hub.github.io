@@ -35,11 +35,10 @@ document.addEventListener('DOMContentLoaded', () => {
   form.addEventListener('submit', function(event) {
     event.preventDefault();
     const emailValue = emailInput.value;
-    console.log(emailValue);
-    if(!emailValue.endsWith("@codechum.com")){
-        errorInput.style.display = "flex";
-    } else {
+    if(emailValue.endsWith("@evsu.edu.ph")){
         errorInput.style.display = "none";
+    } else {
+        errorInput.style.display = "flex";
     }
   });
 });

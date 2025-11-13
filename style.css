@@ -17,9 +17,10 @@
 body {
     background-color: var(--bg-color);
     overflow-y: hidden;
+    font-family: 'Arial', sans-serif;
 }
 
-h1, i {
+h1, i, label {
     color: var(--text-color);
 }
 
@@ -51,8 +52,35 @@ nav {
     padding: 10px;
 }
 
-#email {
-    margin: 0 0 10px 0;
+form > button {
+  margin: 10px 0px 0px 0px;
+  background-color: #007bff;
+  color: #ffffff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+form > button:hover {
+  background-color: #0056b3;
+  transform: translateY(-1px);
+}
+
+form > button:active {
+  background-color: #004085;
+  transform: translateY(0);
+}
+
+form > #email {
+  border: 1px solid grey;
+  border-radius: 5px;
+  padding: 10px;
 }
 
 .errorEmail {
@@ -61,10 +89,11 @@ nav {
     align-items: center;
     gap: 5px;
     color: var(--error-color);
+    margin: 5px 0 5px 0;
 }
 
 .errorEmail > h5 {
-    margin: 5px 0 10px 0;
+    margin: 0;
 }
 
 .warning {
