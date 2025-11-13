@@ -3,6 +3,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const themeIcon = document.getElementById("themeIcon");
   const root = document.documentElement;
 
+  const form = document.getElementById("form");
+  const emailInput = document.getElementById("email");
+  const errorInput = document.getElementById("errorEmail");
+
   const savedTheme = localStorage.getItem("theme");
   if (savedTheme) {
     root.setAttribute("data-theme", savedTheme);
@@ -27,4 +31,15 @@ document.addEventListener('DOMContentLoaded', () => {
       themeIcon.classList.add("sun");
     }
   }
+
+  form.addEventListener('submit', function(event) {
+    event.preventDefault();
+    const emailValue = emailInput.value;
+    console.log(emailValue);
+    if(!emailValue.endsWith("@codechum.com")){
+        errorInput.style.display = "flex";
+    } else {
+        errorInput.style.display = "none";
+    }
+  });
 });
