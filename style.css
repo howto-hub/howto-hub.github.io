@@ -81,6 +81,13 @@ form > #email {
   border: 1px solid grey;
   border-radius: 5px;
   padding: 10px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+form > #email:active {
+  border: none;
+  background-color: var(--bg-color);
 }
 
 .errorEmail {
