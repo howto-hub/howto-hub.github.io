@@ -1,11 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        if(localStorage.getItem('data-theme')) {
+            document.documentElement.setAttribute('data-theme', localStorage.getItem('data-theme'));
+        }
+    </script>
 </head>
 <body>
-    <h1>Hello BSIT-2C.</h1>
+    <nav>
+        <a href="#" id="theme-toggle"><i id="theme-icon" class="sun"></i></a>
+    </nav>
+    <script src="script.js"></script>
 </body>
 </html>
